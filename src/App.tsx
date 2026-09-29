@@ -15,6 +15,7 @@ import {
   WifiOff,
   Smile,
   Type,
+  ExternalLink,
 } from 'lucide-react';
 import {
   STORYBOOK_PAGES,
@@ -36,6 +37,7 @@ import {
 import { PWAInstallButton } from './components/PWAInstallButton';
 import { useOnlineStatus } from './components/usePWAInstall';
 import { FoodSvgIcon } from './components/FoodSvgIcons';
+import { buildStandaloneBlobUrl } from './utils/standaloneLauncher';
 
 const STORAGE_PROFILES_KEY = 'sunny_picnic_profiles_v1';
 const STORAGE_ACTIVE_PROFILE_KEY = 'sunny_picnic_active_profile_v1';
@@ -118,6 +120,14 @@ export default function App() {
   const [isDictionaryOpen, setIsDictionaryOpen] = useState(false);
   const [isParentModalOpen, setIsParentModalOpen] = useState(false);
   const [coverImgError, setCoverImgError] = useState(false);
+  const [standaloneTabUrl, setStandaloneTabUrl] = useState<string>('#');
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setStandaloneTabUrl(buildStandaloneBlobUrl());
+    }, 300);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   // Touch Swipe Tracking for Mobile / Tablet Page Flipping
   const touchStartX = useRef<number | null>(null);
@@ -646,6 +656,18 @@ export default function App() {
                             Continue Page {Math.max(...activeProfile.pagesCompleted)}
                           </button>
                         )}
+
+                        <a
+                          href={standaloneTabUrl}
+                          target="_blank"
+                          onMouseEnter={() => setStandaloneTabUrl(buildStandaloneBlobUrl())}
+                          onFocus={() => setStandaloneTabUrl(buildStandaloneBlobUrl())}
+                          className="min-h-[42px] px-4 py-2 rounded-xl border border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-950 text-xs sm:text-sm font-bold flex items-center gap-1.5 transition-colors cursor-pointer whitespace-nowrap"
+                          title="Open Storybook in a full separate browser tab"
+                        >
+                          <ExternalLink className="w-4 h-4 text-amber-700 shrink-0" />
+                          <span>Open Full Page</span>
+                        </a>
                       </div>
                     </div>
 
