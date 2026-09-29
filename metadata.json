@@ -1,0 +1,6 @@
+{
+  "name": "Sunny Picnic: 2nd Grade Interactive Food & Fruit Storybook",
+  "description": "An interactive 20-page virtual English storybook for 2nd-grade children featuring food, fruit, and drink vocabulary, cheerful audio narration with adjustable speed, animated illustrations, word-completion games, offline PWA support, and a parental progress dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="112" fill="#FEF3C7"/>
+  <rect x="36" y="36" width="440" height="440" rx="88" fill="#FFFBEB" stroke="#F59E0B" stroke-width="12"/>
+  <!-- Open Storybook -->
+  <path d="M96 340V160C96 146 110 136 124 138L244 156V364L120 346C106 344 96 352 96 340Z" fill="#FFFFFF" stroke="#D97706" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M416 340V160C416 146 402 136 388 138L268 156V364L392 346C406 344 416 352 416 340Z" fill="#FFFFFF" stroke="#D97706" stroke-width="12" stroke-linejoin="round"/>
+  <line x1="256" y1="156" x2="256" y2="366" stroke="#B45309" stroke-width="14" stroke-linecap="round"/>
+  <!-- Cheerful Red Apple on Left Page -->
+  <circle cx="174" cy="250" r="42" fill="#EF4444" stroke="#991B1B" stroke-width="8"/>
+  <path d="M174 206C174 192 186 182 198 184" stroke="#15803D" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="192" cy="194" rx="14" ry="8" transform="rotate(-20 192 194)" fill="#22C55E"/>
+  <!-- Orange Juice Glass on Right Page -->
+  <path d="M312 214H364L356 294H320L312 214Z" fill="#F97316" stroke="#9A3412" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M348 214L362 182" stroke="#0284C7" stroke-width="8" stroke-linecap="round"/>
+</svg>
